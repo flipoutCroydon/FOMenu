@@ -16,7 +16,7 @@ html, body {
     box-shadow:0 6px 6px -6px #000;
     display:inline-block;
     flex:1 1;
-    height:200px;
+    min-height:200px;
     margin:1vmin;
     overflow:hidden;
     position:relative;
@@ -38,6 +38,7 @@ html, body {
   }
   
   .bottom-right {
+    margin-top: 0%;
     bottom:-2px;
     position:absolute;
     right:-6px;
@@ -80,21 +81,6 @@ html, body {
     width:0;
   }
   
-  .panel:nth-child(1) {
-    flex-basis: 400px;
-  }
-  .panel:nth-child(2) {
-    flex-basis: 200px;
-  }
-  .panel:nth-child(3) {
-    flex-basis: 200px;
-  }
-  .panel:nth-child(4) {
-    flex-basis: 200px;
-  }
-  .panel:nth-child(5) {
-    flex-basis: 200px;
-  }
   .panel {
     flex-basis: 40vw;
   }
@@ -116,3 +102,25 @@ html, body {
   .panel:nth-child(4n+4) {
     background-image:radial-gradient(circle, lightcoral, tomato);
   }
+  .foods{
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .food_item{
+    display: flex;
+  }
+  .food_item > .item:after{ content:" .......................................................................";}
+  .food_item > .item{
+    flex-basis: 90%;
+    max-width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
+  }
+  .food_item > .price{
+    flex-basis: 10%;
+  }
+  .price:before{content: "£";}
