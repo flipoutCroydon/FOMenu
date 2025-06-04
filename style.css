@@ -2,12 +2,16 @@ html, body {
     margin:0;
     padding:0;
   }
-  
+  ul {
+    list-style: none;
+  }
+
   .comic {
     display:flex;
     flex-wrap:wrap;
     font-family:'Comic Sans', cursive;
     padding:1vmin;
+    font-size-adjust: 0.75;
   }
   
   .panel {
@@ -21,6 +25,9 @@ html, body {
     overflow:hidden;
     position:relative;
   }
+  .panel:nth-child(3) {
+  flex-basis: 100vh;
+}
   
   .text {
     background-color:#fff;
@@ -38,7 +45,7 @@ html, body {
   }
   
   .bottom-right {
-    margin-top: 0%;
+    margin-top: 10%;
     bottom:-2px;
     position:absolute;
     right:-6px;
@@ -80,6 +87,9 @@ html, body {
     transform:skew(-15deg);
     width:0;
   }
+  .item>.item_symbol{
+    height: 1em;
+  }
   
   .panel {
     flex-basis: 40vw;
@@ -104,23 +114,31 @@ html, body {
   }
   .foods{
     margin-top: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    margin-right: auto;
+    padding: 15px;
+  }
+  .vegan{
+    background-image: url('assets/images/vegan_icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .food_item{
     display: flex;
+    width: 100%;
   }
-  .food_item > .item:after{ content:" .......................................................................";}
   .food_item > .item{
-    flex-basis: 90%;
-    max-width: 90%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-   display: -webkit-box;
-   -webkit-line-clamp: 1; /* number of lines to show */
-           line-clamp: 1; 
-   -webkit-box-orient: vertical;
+    font-size: large;
+    white-space: nowrap;
   }
+  .food_item > .divider{
+    flex: 1;
+    border-bottom: 3px dotted black;
+}
   .food_item > .price{
-    flex-basis: 10%;
-  }
+    margin-left: auto; 
+    font-size: large;
+    margin-right: 0;
+  } 
   .price:before{content: "£";}
+  
