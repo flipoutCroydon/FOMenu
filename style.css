@@ -22,11 +22,11 @@ html, body {
     flex:1 1;
     min-height:200px;
     margin:1vmin;
-    overflow:hidden;
+    overflow-x:clip;
     position:relative;
   }
   .panel:nth-child(3) {
-  flex-basis: 100vh;
+  flex-basis: 100vw;
 }
   
   .text {
@@ -37,7 +37,8 @@ html, body {
   }
   
   .top-left {
-    left:-9px;
+    left:-15px;
+    padding-left: 30px;
     position:absolute;
     top:-2px;
     font-size: xx-large;
@@ -48,8 +49,21 @@ html, body {
     margin-top: 10%;
     bottom:-2px;
     position:absolute;
-    right:-6px;
+    right:-20px;
+    padding-right: 25px;
     transform:skew(-15deg);
+    font-size: larger;
+    max-width: 35%;
+  }
+  .bottom-left {
+    margin-top: 10%;
+    bottom:-2px;
+    position:absolute;
+    left:-20px;
+    font-size: large;
+    padding-left: 25px;
+    transform:skew(-15deg);
+    max-width: 35%;
   }
   
   .speech {
@@ -113,7 +127,7 @@ html, body {
     background-image:radial-gradient(circle, lightcoral, tomato);
   }
   .foods{
-    margin-top: 60px;
+    margin-top: 75px;
     margin-bottom: 60px;
     margin-right: auto;
     padding: 15px;
@@ -133,6 +147,8 @@ html, body {
   }
   .food_item > .divider{
     flex: 1;
+    margin: 10px;
+    /* padding: 2px; */
     border-bottom: 3px dotted black;
 }
   .food_item > .price{
@@ -140,5 +156,23 @@ html, body {
     font-size: large;
     margin-right: 0;
   } 
-  .price:before{content: "£";}
-  
+  .price:before{
+    content: "  £";
+  }
+  .fo_ninja{
+    height :180px;
+    cursor: move;
+    display: block;
+    position: absolute;
+    overflow: visible;
+    top: -80px;
+    right: 0;
+  }
+  .extra_space{
+    padding-bottom: 15px;
+  }
+  .whitebg{
+    background-color: floralwhite;
+    padding: 10px;
+    margin: -10px;
+  }
